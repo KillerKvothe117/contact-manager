@@ -7,7 +7,9 @@ import { useEffect, useState } from "react";
 
 function App() {
   const LOCAL_STORAGE_KEY = "contacts";
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(
+    JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+  );
 
   const addContactHandler = (contact) => {
     setContacts([...contacts, { id: uuid(), ...contact }]);
@@ -21,10 +23,10 @@ function App() {
     setContacts(newContactList);
   };
 
-  useEffect(() => {
-    const getContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (getContacts) setContacts(getContacts);
-  }, []);
+  // useEffect(() => {
+  //   const getContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+  //   if (getContacts) setContacts(getContacts);
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
