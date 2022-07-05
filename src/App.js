@@ -51,11 +51,6 @@ function App() {
             path="/add"
             element={<AddContact addContactHandler={addContactHandler} />}
           />
-          {/* <AddContact addContactHandler={addContactHandler} /> */}
-          {/* <ContactList
-            contacts={contacts}
-            getContactID={removeContactHandler}
-          /> */}
         </Routes>
       </Router>
     </div>
