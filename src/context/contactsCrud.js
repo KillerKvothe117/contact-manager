@@ -50,7 +50,6 @@ export function ContactsCrudContextProvider({ children }) {
     setText(searchTerm);
     if (searchTerm !== "") {
       const newContactList = contacts.filter((contact) => {
-        console.log(contact);
         return Object.values(contact)
           .join(" ")
           .toLowerCase()
