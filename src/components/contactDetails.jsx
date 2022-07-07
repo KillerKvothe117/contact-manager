@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import user from "../assets/user.png";
+import profile from "../assets/profile.jpg";
 
 const ContactDetail = () => {
   const location = useLocation();
@@ -10,7 +10,7 @@ const ContactDetail = () => {
     <div className="main">
       <div className="ui card centered">
         <div className="image">
-          <img src={user} alt="user" />
+          <img src={profile} alt="user" />
         </div>
         <div className="content">
           <div className="header">{name}</div>
